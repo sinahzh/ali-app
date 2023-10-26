@@ -1,6 +1,6 @@
 import { Mapper } from 'src/base/mapper';
 import { UserModel } from 'src/domain/models/user.model';
-import { UserEntity } from '../domain/repositories/user/entities/user-entity';
+import { UserEntity } from '../entities/user-entity';
 
 export class UserImplementationRepositoryMapper extends Mapper<UserEntity, UserModel> {
     mapForm(param: UserEntity): UserModel {

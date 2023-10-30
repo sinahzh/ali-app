@@ -7,9 +7,8 @@ export class UserLoginUseCase implements UseCase<{ username: string; password: s
     
     constructor(private userRepository: UserRepository) { }    
     
-    execute(
-       params: { username: string, password: string },
-    ): Observable<UserModel> {
+    execute(params: { username: string, password: string },): Observable<UserModel> 
+    {
         return this.userRepository.login(params);
     }
 }

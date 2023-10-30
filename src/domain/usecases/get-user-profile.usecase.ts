@@ -6,7 +6,8 @@ export class GetUserProfileUseCase implements UseCase<void, UserModel> {
     
     constructor(private userRepository: UserRepository) { }
     
-    execute(): Observable<UserModel> {
+    execute(): Observable<UserModel> 
+    {
         return this.userRepository.getUserProfile();
     }
 }

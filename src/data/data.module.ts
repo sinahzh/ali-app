@@ -6,25 +6,35 @@ import { UserLoginUseCase } from 'src/domain/usecases/user-login.usecase';
 import { UserRegisterUseCase } from 'src/domain/usecases/user-register.usecase';
 import { GetUserProfileUseCase } from 'src/domain/usecases/get-user-profile.usecase';
 import { UserImplementationRepository } from './repositories/user/user-implementation.repository';
+
 const userLoginUseCaseFactory = 
 (userRepo: UserRepository) => new UserLoginUseCase(userRepo);
+
 export const userLoginUseCaseProvider = {
     provide: UserLoginUseCase,
     useFactory: userLoginUseCaseFactory,
     deps: [UserRepository],
-};const userRegisterUseCaseFactory = 
+};
+
+const userRegisterUseCaseFactory = 
 (userRepo: UserRepository) => new UserRegisterUseCase(userRepo);
+
 export const userRegisterUseCaseProvider = {
     provide: UserRegisterUseCase,
     useFactory: userRegisterUseCaseFactory,
     deps: [UserRepository],
-};const getUserProfileUseCaseFactory = 
+};
+
+const getUserProfileUseCaseFactory = 
 (userRepo: UserRepository) => new GetUserProfileUseCase(userRepo);
+
 export const getUserProfileUseCaseProvider = {
     provide: GetUserProfileUseCase,
     useFactory: getUserProfileUseCaseFactory,
     deps: [UserRepository],
-};@NgModule({
+};
+
+@NgModule({
     providers: [
         userLoginUseCaseProvider,
         userRegisterUseCaseProvider,

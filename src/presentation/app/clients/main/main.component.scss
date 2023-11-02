@@ -79,14 +79,26 @@ header
 }
 .image-header img
 {
-    width: 808px;
-    height: 487px;
+    width: 600px;
+    height: 435px;
 }
 .p-153
 {
     padding: 153px;
+    padding-left: 0px;
 }
-
+.position-image-header
+{
+    position: relative;
+    top: 55px;
+    right: 153px;
+}
+.position-text-header
+{
+    position: relative;
+    top: 100px;
+    right: 153px;
+}
 .description-header span:first-child
 {
     font-size: 30px;
@@ -112,6 +124,8 @@ header
     text-align: right;
     line-height: 27.86px;
     margin-top: 35px;
+    width: 533px;
+    height: 106px;
 
 }
 .redius-button-fill
